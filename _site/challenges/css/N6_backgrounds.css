@@ -1,0 +1,15 @@
+.first {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
+}
+
+.second {
+    background-image: url(https://img.freepik.com/photos-gratuite/prise-vue-au-grand-angle-seul-arbre-poussant-sous-ciel-assombri-pendant-coucher-soleil-entoure-herbe_181624-22807.jpg?w=2000);
+    background-position: left;
+    background-size: 100%;
+}
+
+.third {
+    background: url('../../assets/img/bg.gif') 0 0;
+    background-repeat: repeat;
+}
