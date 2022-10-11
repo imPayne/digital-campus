@@ -1,0 +1,35 @@
+.title_text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.normal_text {
+    padding: 5px 10px 5px 5px;
+}
+
+#F {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#S {
+    font-style: italic;
+    color: blue;
+}
+
+#T {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+#first {
+    text-align: left;
+}
+
+#second {
+    text-align: center;
+}   
+
+#third {
+    text-align: right;
+}

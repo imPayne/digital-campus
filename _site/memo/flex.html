@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>🧾 Mémo 🧾</title>
+
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/fr.min.js"
+  integrity="sha512-RAt2+PIRwJiyjWpzvvhKAG2LEdPpQhTgWfbEkFDCo8wC4rFYh5GQzJBVIFDswwaEDEYX16GEE/4fpeDNr7OIZw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script>
+  moment.locale("fr");
+</script>
+
+
+    <link rel="icon" href="https://formation.melvin.studio/integration-workshop/assets/images/favicon.png" />
+    <link rel="stylesheet" href="../assets/css/ploume.min.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+  </head>
+
+  <body class="body memo page flexbox">
+    <main class="main">
+      <div class="container"><img src="https://formation.melvin.studio/integration-workshop/assets/images/memo/cat.gif" id="cat" />
+
+<script>
+  document.getElementById("cat").addEventListener("click", () => {
+    document.getElementById("cat").style.display = "none";
+  });
+</script>
+
+<header class="header">
+  <h1 class="header__title">Flex</h1>
+</header>
+
+<section class="section">
+  <div class="fields">
+    <div class="fields__field">
+      <p class="fields__field_label">Display</p>
+      <select class="fields__field_select" id="display">
+        <option>flex</option>
+      </select>
+    </div>
+
+    <div class="fields__field">
+      <p class="fields__field_label">flex-direction</p>
+      <select class="fields__field_select" id="flex-direction">
+        <option value="row">row (par défaut si non précisé)</option>
+        <option value="column">column</option>
+        <option value="row-reverse">row-reverse</option>
+        <option value="column-reverse">column-reverse</option>
+      </select>
+    </div>
+
+    <script>
+      let direction = "row";
+      let previous__direction = "row";
+      document.getElementById("flex-direction").addEventListener("change", () => {
+        console.log("flex-direction changed");
+        document.getElementById("demo").style.flexDirection = document.getElementById("flex-direction").value;
+
+        direction = document.getElementById("flex-direction").value;
+        if (direction == "row" || direction == "row-reverse") {
+          direction = "row";
+          console.log("set direction : row (previous : " + previous__direction + ")");
+        } else if (direction == "column" || direction == "column-reverse") {
+          direction = "column";
+          console.log("set direction : column (previous : " + previous__direction + ")");
+        }
+
+        if (direction != previous__direction) {
+          console.log("direction different than previous direction");
+          document.getElementById("axis--x").classList.toggle("red");
+          document.getElementById("axis--x").classList.toggle("green");
+          document.getElementById("axis--y").classList.toggle("red");
+          document.getElementById("axis--y").classList.toggle("green");
+
+          if (direction == "column") {
+            document.getElementById("axis--x__label").innerText = "align-items";
+            document.getElementById("axis--y__label").innerText = "justify-content";
+          } else {
+            document.getElementById("axis--x__label").innerText = "justify-content";
+            document.getElementById("axis--y__label").innerText = "align-items";
+          }
+
+          if (direction == previous__direction) {
+            console.log("direction same than previous direction");
+          } else if (direction == "row" || direction == "row-reverse") {
+            previous__direction = "row";
+            console.log("set previous direction : row");
+          } else if (direction == "column" || direction == "column-reverse") {
+            previous__direction = "column";
+            console.log("set previous direction : column");
+          } else {
+            console.log("direction problem");
+          }
+        }
+      });
+    </script>
+
+    <div class="fields__field">
+      <p class="fields__field_label">justify-content</p>
+      <select class="fields__field_select" id="justify-content">
+        <option selected disabled>Choisissez la valeur</option>
+        <option value="flex-start">flex-start</option>
+        <option value="center">center</option>
+        <option value="flex-end">flex-end</option>
+        <option value="space-around">space-around</option>
+        <option value="space-between">space-between</option>
+      </select>
+    </div>
+
+    <script>
+      document.getElementById("justify-content").addEventListener("change", () => {
+        console.log("justify-content changed");
+        document.getElementById("demo").style.justifyContent = document.getElementById("justify-content").value;
+      });
+    </script>
+
+    <div class="fields__field">
+      <p class="fields__field_label">align-items</p>
+      <select class="fields__field_select" id="align-items">
+        <option selected disabled>Choisissez la valeur</option>
+        <option>flex-start</option>
+        <option>center</option>
+        <option>flex-end</option>
+        <option>stretch</option>
+      </select>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("align-items").addEventListener("change", () => {
+      console.log("align-items changed");
+      document.getElementById("demo").style.alignItems = document.getElementById("align-items").value;
+    });
+  </script>
+
+  <div class="demo" id="demo">
+    <div class="demo__box">1</div>
+    <div class="demo__box">2</div>
+    <div class="demo__box">3</div>
+    <div class="demo__axis demo__axis--x red" id="axis--x">
+      <p class="demo__axis_legend" id="axis--x__label">justify-content</p>
+    </div>
+    <div class="demo__axis demo__axis--y green" id="axis--y">
+      <p class="demo__axis_legend" id="axis--y__label">align-items</p>
+    </div>
+  </div>
+</section>
+</div>
+    </main>
+
+     
+
+<footer class="footer">
+
+  <div class="container flex-c">
+
+    <img class="footer__logo" src="https://formation.melvin.studio/integration-workshop/assets/images/logo-footer.png" alt="Logo"/>
+
+    <p class="is-6 mt-1">Version <span class="bold">1.5</span><span class="op-25">
+      publiée
+      <span class="" id="moment-footer"></span>
+    </span></p>
+
+    
+
+    <a class="is-6" href="https://formation.melvin.studio/integration-workshop" target="_blank"
+      >Site du support <i class="fa-solid fa-arrow-up-right-from-square"></i
+    ></a>
+
+      <p class="is-6 mt-3">
+        Support pédgogique de formation au Javascript pensé et développé avec passion ❤️ par
+        <a class="bold" href="https://melvin-lemoine.me" target="_blank">Melvin Lemoine</a>.
+      </p>
+      <!-- <p class="total is-7"><span class="bold">1</span> étudiant·e·s ont déjà utilisé ce support.</p> -->
+
+      
+
+      <script>
+        document.getElementById("moment-footer").innerHTML = moment(
+          "11.10.2022 13:30",
+          "DD.MM.YYYY hh:mm"
+        ).fromNow();
+      </script>
+
+  </div>
+</footer>
+
+  </body>
+</html>

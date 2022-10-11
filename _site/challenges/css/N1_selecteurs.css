@@ -1,0 +1,15 @@
+.block {
+    margin-top: 30px;
+}
+
+#first_box {
+    border: 1px solid red;
+}
+
+#second_box {
+    border: 1px solid blue;
+}
+
+#third_box {
+    border: 1px solid yellow;
+}

@@ -1,0 +1,2242 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title>🏆 Challenges 🏆</title>
+
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/fr.min.js"
+  integrity="sha512-RAt2+PIRwJiyjWpzvvhKAG2LEdPpQhTgWfbEkFDCo8wC4rFYh5GQzJBVIFDswwaEDEYX16GEE/4fpeDNr7OIZw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script>
+  moment.locale("fr");
+</script>
+
+
+    <link rel="stylesheet" href="assets/css/all.min.css"/>
+
+    <link rel="icon" href="https://formation.melvin.studio/integration-workshop/assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/ploume.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="body challenges">
+
+
+    <div class="topbar">
+        <div class="container h-full flex-r h-centered">
+
+            <div id="topbar-progressbar" class="topbar__progress">
+                <p class="topbar__progress_title bold is-7">Progression générale <span id="main-progression--percent" class="bold op-50"></span></p>
+                <div class="topbar__progress_bar">
+                    <!-- <div id="main-progression" class="topbar__progress_bar_progression"></div> -->
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                    <div class="topbar__progress_bar_square"></div>
+                </div>
+            </div>
+
+            <h1 class="topbar__title is-1-xs bold text-centered uppercase">
+                <a
+                  class="cup"
+                  href="https://formation.melvin.studio/integration-workshop/legendes.html"
+                  target="_blank"
+                  >🏆</a
+                >
+                Challenges
+                <a
+                  class="cup"
+                  href="https://formation.melvin.studio/integration-workshop/legendes.html"
+                  target="_blank"
+                  >🏆</a
+                >
+              </h1>
+
+        </div>
+    </div>
+
+    <main class="main">
+
+        <div class="container">
+            <img class="Clippy pointer" src="https://formation.melvin.studio/integration-workshop/assets/images/clippy.gif" alt="Clippy" onclick="helper()" />
+
+<div id="helper" class="Helper" onclick="helper()">
+  <div class="Helper__box">
+    <div class="Helper__box_header flex-r h-centered v-end p-2">
+      <!-- <h2 class="Helper__box_header_title fw-medium is-6">Mémo</h2> -->
+      <div class="Helper__box_header_controls flex-r">
+        <span class="Helper__box_header_controls_control Helper__box_header_controls_control--green"></span>
+        <span class="Helper__box_header_controls_control Helper__box_header_controls_control--yellow"></span>
+        <span class="Helper__box_header_controls_control Helper__box_header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <div class="Helper__box_content">
+
+      <p class="Helper__box_content_title">Un problème ?</p>
+
+      <ul class="Helper__box_content_list">
+        
+
+        <li class="Helper__box_content_list_element flex-r h-centered red w-full">
+          <span class="Helper__box_content_list_element_icon content-centered br-large mr-2">
+            <i class="Helper__box_content_list_element_icon_i fa-solid fa-keyboard"></i>
+          </span>
+
+          <div class="Helper__box_content_list_element_content flex-c">
+            <p class="Helper__box_content_list_element_title bold is-5">Syntaxe</p>
+            <p class="Helper__box_content_list_element_description is-6 text-justify">Vérifiez que votre code ne contient pas d'erreurs de syntaxe et que votre IDE ne souligne rien en rouge.</p>
+          </div>
+        </li>
+
+        
+
+        <li class="Helper__box_content_list_element flex-r h-centered orange w-full">
+          <span class="Helper__box_content_list_element_icon content-centered br-large mr-2">
+            <i class="Helper__box_content_list_element_icon_i fa-solid fa-terminal"></i>
+          </span>
+
+          <div class="Helper__box_content_list_element_content flex-c">
+            <p class="Helper__box_content_list_element_title bold is-5">Console</p>
+            <p class="Helper__box_content_list_element_description is-6 text-justify">Certaines erreurs de syntaxe apparaissent dans la console.</p>
+          </div>
+        </li>
+
+        
+
+        <li class="Helper__box_content_list_element flex-r h-centered blue w-full">
+          <span class="Helper__box_content_list_element_icon content-centered br-large mr-2">
+            <i class="Helper__box_content_list_element_icon_i fa-solid fa-magnifying-glass"></i>
+          </span>
+
+          <div class="Helper__box_content_list_element_content flex-c">
+            <p class="Helper__box_content_list_element_title bold is-5">Inspecteur</p>
+            <p class="Helper__box_content_list_element_description is-6 text-justify">Utilisez l'inspecteur pour voir si votre style est bien pris en compte, et identifiez les erreurs de style.</p>
+          </div>
+        </li>
+
+        
+
+        <li class="Helper__box_content_list_element flex-r h-centered green w-full">
+          <span class="Helper__box_content_list_element_icon content-centered br-large mr-2">
+            <i class="Helper__box_content_list_element_icon_i fa-solid fa-comment-dots"></i>
+          </span>
+
+          <div class="Helper__box_content_list_element_content flex-c">
+            <p class="Helper__box_content_list_element_title bold is-5">Sollicitez-moi</p>
+            <p class="Helper__box_content_list_element_description is-6 text-justify">Après avoir considéré les points ci-dessus, si votre problème persiste, je suis à votre disposition pour vous aider.</p>
+          </div>
+        </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<audio id="balloon">
+  <source src="https://formation.melvin.studio/integration-workshop/assets/audio/balloon.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  let helper__status = false;
+  function helper() {
+    console.log("helper");
+    if (helper__status) {
+      console.log("true to false");
+      document.getElementById("helper").style.display = "none";
+      helper__status = false;
+    } else {
+      console.log("false to true");
+      document.getElementById("helper").style.display = "flex";
+      document.getElementById("balloon").play();
+      helper__status = true;
+    }
+  }
+</script>
+
+
+<section class="section flex-c v-centered">
+  <ul class="grid">
+    <script>
+      let done__total = 0;
+    </script>
+
+       
+
+    <script>
+      let done__total_notion = 0;
+      // console.log("##### CHALLENGES SECTION TITLE notion #####")
+    </script>
+
+             
+    <script>
+      if (
+        localStorage.getItem("challenge-N1") == "done"
+      ) {
+        // console.log('✅ challenge-N1');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N1')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N2") == "done"
+      ) {
+        // console.log('✅ challenge-N2');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N2')
+      }
+    </script>
+               
+    <script>
+      if (
+        localStorage.getItem("challenge-N4") == "done"
+      ) {
+        // console.log('✅ challenge-N4');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N4')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N5") == "done"
+      ) {
+        // console.log('✅ challenge-N5');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N5')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N6") == "done"
+      ) {
+        // console.log('✅ challenge-N6');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N6')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N7") == "done"
+      ) {
+        // console.log('✅ challenge-N7');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N7')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N8") == "done"
+      ) {
+        // console.log('✅ challenge-N8');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N8')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N9") == "done"
+      ) {
+        // console.log('✅ challenge-N9');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N9')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N10") == "done"
+      ) {
+        // console.log('✅ challenge-N10');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N10')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N11") == "done"
+      ) {
+        // console.log('✅ challenge-N11');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N11')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N12") == "done"
+      ) {
+        // console.log('✅ challenge-N12');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N12')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-N13") == "done"
+      ) {
+        // console.log('✅ challenge-N13');
+        done__total_notion++;
+      } else {
+        // console.log('❌ challenge-N13')
+      }
+    </script>
+                                                                                     
+
+    <div class="grid__separator w-full flex-r h-centered v-centered pv-3">
+      <hr class="grid__separator_line" />
+      <h2 class="grid__separator_title mh-3">
+        Découvrir et expérimenter les notions
+        <div id="progressbar-notion" class="grid__separator_title_progressbar">
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+        </div>
+      </h2>
+      <hr class="grid__separator_line" />
+
+      <script>
+        // console.log("# INFOS #");
+        // console.log("for_type : " + "notion");
+        // console.log("type : " + "notion");
+        // console.log("cat total : " + "12");
+        // console.log("cat done : " + done__total_notion);
+        // console.log("Total separator : " + "separator");
+
+        let cat__challenges_notion = 12;
+        let challenges_progress_notion = Math.round(done__total_notion* 100 / cat__challenges_notion);
+        // console.log("percentage : " + mainProgressPercent);
+        // document.getElementById('progress-notion').style.width = challenges_progress_notion + "%";
+
+        // console.log(document.querySelectorAll('#progressbar-notion .grid__separator_title_progressbar_square'));
+        // console.log("percent : " + challenges_progress_notion);
+        // console.log("percent trunc : " + Math.trunc(challenges_progress_notion));
+        // console.log("percent trunc / 10 : " + Math.trunc(challenges_progress_notion / 10 * 4));
+
+        for (i = 0; i < (Math.trunc(challenges_progress_notion / 10) * 3); i++){
+              // console.log("Added square !");
+              document.querySelectorAll(
+                '#progressbar-notion .grid__separator_title_progressbar_square')[i].classList.add(
+                'filled');
+            }
+      </script>
+    </div>
+
+      
+
+    <li
+      id="challenge-N1"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N1_selecteurs.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N1</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Sélecteurs
+          </h2>
+          <p class="is-7-xs">Sélectionnez des éléments dans le HTML de plusieurs façons.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N1") == "done") {
+            // console.log('✅ challenge-N1');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N1')
+          }
+          document
+            .getElementById("challenge-N1")
+            .classList.add(localStorage.getItem("challenge-N1"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N2"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N2_textes.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N2</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Textes
+          </h2>
+          <p class="is-7-xs">Personnaliser l'apparence de textes.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N2") == "done") {
+            // console.log('✅ challenge-N2');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N2')
+          }
+          document
+            .getElementById("challenge-N2")
+            .classList.add(localStorage.getItem("challenge-N2"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N3"
+      class="grid__challenge flex br-normal disable  notion"
+    >
+      <a href="./challenges/N3_display.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N3</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Display
+          </h2>
+          <p class="is-7-xs">Définir le mode d'affichage des éléments.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N3") == "done") {
+            // console.log('✅ challenge-N3');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N3')
+          }
+          document
+            .getElementById("challenge-N3")
+            .classList.add(localStorage.getItem("challenge-N3"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N4"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N4_width-height.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N4</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Width & height
+          </h2>
+          <p class="is-7-xs">Définir la longueur et la hauteur des éléments.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N4") == "done") {
+            // console.log('✅ challenge-N4');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N4')
+          }
+          document
+            .getElementById("challenge-N4")
+            .classList.add(localStorage.getItem("challenge-N4"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N5"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N5_box-model.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N5</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Box model
+          </h2>
+          <p class="is-7-xs">Définir les marges intérieures et extérieures des éléments.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N5") == "done") {
+            // console.log('✅ challenge-N5');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N5')
+          }
+          document
+            .getElementById("challenge-N5")
+            .classList.add(localStorage.getItem("challenge-N5"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N6"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N6_backgrounds.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N6</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Backgrounds
+          </h2>
+          <p class="is-7-xs">Définir des fonds de couleurs et d'images.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N6") == "done") {
+            // console.log('✅ challenge-N6');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N6')
+          }
+          document
+            .getElementById("challenge-N6")
+            .classList.add(localStorage.getItem("challenge-N6"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N7"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N7_flex.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N7</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Flex
+          </h2>
+          <p class="is-7-xs">Structurer et aligner les éléments.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N7") == "done") {
+            // console.log('✅ challenge-N7');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N7')
+          }
+          document
+            .getElementById("challenge-N7")
+            .classList.add(localStorage.getItem("challenge-N7"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N8"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N8_grid.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N8</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Grid
+          </h2>
+          <p class="is-7-xs">Constuire des grilles pour structurer les éléments.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N8") == "done") {
+            // console.log('✅ challenge-N8');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N8')
+          }
+          document
+            .getElementById("challenge-N8")
+            .classList.add(localStorage.getItem("challenge-N8"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N9"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N9_absolute.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N9</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Absolute
+          </h2>
+          <p class="is-7-xs">Utiliser la position absolute pour faire flotter des éléments par rapport à d'autres.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N9") == "done") {
+            // console.log('✅ challenge-N9');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N9')
+          }
+          document
+            .getElementById("challenge-N9")
+            .classList.add(localStorage.getItem("challenge-N9"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N10"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N10_fixed.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N10</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Fixed
+          </h2>
+          <p class="is-7-xs">Utiliser la position fixed pour faire flotter des éléments par rapport à l'écran.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N10") == "done") {
+            // console.log('✅ challenge-N10');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N10')
+          }
+          document
+            .getElementById("challenge-N10")
+            .classList.add(localStorage.getItem("challenge-N10"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N11"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N11_hover.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N11</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Hover
+          </h2>
+          <p class="is-7-xs">Changer le style d'un élément lorsque l'on passe la souris dessus.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N11") == "done") {
+            // console.log('✅ challenge-N11');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N11')
+          }
+          document
+            .getElementById("challenge-N11")
+            .classList.add(localStorage.getItem("challenge-N11"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N12"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N12_transform.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N12</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Transform
+          </h2>
+          <p class="is-7-xs">Effectuer des transformations sur un élément comme le positionnement, la rotation, la taille...</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N12") == "done") {
+            // console.log('✅ challenge-N12');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N12')
+          }
+          document
+            .getElementById("challenge-N12")
+            .classList.add(localStorage.getItem("challenge-N12"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N13"
+      class="grid__challenge flex br-normal   notion"
+    >
+      <a href="./challenges/N13_transitions.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N13</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Transitions
+          </h2>
+          <p class="is-7-xs">Mettre en place des transitions fluides et smooth lorsqu'un élément change de style.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N13") == "done") {
+            // console.log('✅ challenge-N13');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N13')
+          }
+          document
+            .getElementById("challenge-N13")
+            .classList.add(localStorage.getItem("challenge-N13"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N14"
+      class="grid__challenge flex br-normal disable  notion"
+    >
+      <a href="./challenges/N1_flex.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N14</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Animations
+          </h2>
+          <p class="is-7-xs">Créer des animations de la plus simple à la plus complexe.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N14") == "done") {
+            // console.log('✅ challenge-N14');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N14')
+          }
+          document
+            .getElementById("challenge-N14")
+            .classList.add(localStorage.getItem("challenge-N14"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N15"
+      class="grid__challenge flex br-normal disable  notion"
+    >
+      <a href="./challenges/N1_flex.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N15</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Responsive
+          </h2>
+          <p class="is-7-xs">Rendre une page adaptable à n'importe quelle taille d'écran.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N15") == "done") {
+            // console.log('✅ challenge-N15');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N15')
+          }
+          document
+            .getElementById("challenge-N15")
+            .classList.add(localStorage.getItem("challenge-N15"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-N16"
+      class="grid__challenge flex br-normal disable  notion"
+    >
+      <a href="./challenges/N16_fonts.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">N16</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             Importer des polices d'écriture
+          </h2>
+          <p class="is-7-xs">Importer des polices d'écritures et les exploiter.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-N16") == "done") {
+            // console.log('✅ challenge-N16');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-N16')
+          }
+          document
+            .getElementById("challenge-N16")
+            .classList.add(localStorage.getItem("challenge-N16"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "notion");
+    </script> -->
+
+      
+
+    <script>
+      let done__total_project = 0;
+      // console.log("##### CHALLENGES SECTION TITLE project #####")
+    </script>
+
+                                                                                                       
+    <script>
+      if (
+        localStorage.getItem("challenge-P1") == "done"
+      ) {
+        // console.log('✅ challenge-P1');
+        done__total_project++;
+      } else {
+        // console.log('❌ challenge-P1')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-P2") == "done"
+      ) {
+        // console.log('✅ challenge-P2');
+        done__total_project++;
+      } else {
+        // console.log('❌ challenge-P2')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-P3") == "done"
+      ) {
+        // console.log('✅ challenge-P3');
+        done__total_project++;
+      } else {
+        // console.log('❌ challenge-P3')
+      }
+    </script>
+           
+    <script>
+      if (
+        localStorage.getItem("challenge-P4") == "done"
+      ) {
+        // console.log('✅ challenge-P4');
+        done__total_project++;
+      } else {
+        // console.log('❌ challenge-P4')
+      }
+    </script>
+                                               
+
+    <div class="grid__separator w-full flex-r h-centered v-centered pv-3">
+      <hr class="grid__separator_line" />
+      <h2 class="grid__separator_title mh-3">
+        Appliquer les notions avec des petits projets
+        <div id="progressbar-project" class="grid__separator_title_progressbar">
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+        </div>
+      </h2>
+      <hr class="grid__separator_line" />
+
+      <script>
+        // console.log("# INFOS #");
+        // console.log("for_type : " + "project");
+        // console.log("type : " + "project");
+        // console.log("cat total : " + "4");
+        // console.log("cat done : " + done__total_project);
+        // console.log("Total separator : " + "separator");
+
+        let cat__challenges_project = 4;
+        let challenges_progress_project = Math.round(done__total_project* 100 / cat__challenges_project);
+        // console.log("percentage : " + mainProgressPercent);
+        // document.getElementById('progress-project').style.width = challenges_progress_project + "%";
+
+        // console.log(document.querySelectorAll('#progressbar-project .grid__separator_title_progressbar_square'));
+        // console.log("percent : " + challenges_progress_project);
+        // console.log("percent trunc : " + Math.trunc(challenges_progress_project));
+        // console.log("percent trunc / 10 : " + Math.trunc(challenges_progress_project / 10 * 4));
+
+        for (i = 0; i < (Math.trunc(challenges_progress_project / 10) * 3); i++){
+              // console.log("Added square !");
+              document.querySelectorAll(
+                '#progressbar-project .grid__separator_title_progressbar_square')[i].classList.add(
+                'filled');
+            }
+      </script>
+    </div>
+
+      
+
+    <li
+      id="challenge-P1"
+      class="grid__challenge flex br-normal  level-1 project"
+    >
+      <a href="./challenges/P1_navigation.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">P1</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥉  Navigation
+          </h2>
+          <p class="is-7-xs">Créer une petite barre de navigation.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-P1") == "done") {
+            // console.log('✅ challenge-P1');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-P1')
+          }
+          document
+            .getElementById("challenge-P1")
+            .classList.add(localStorage.getItem("challenge-P1"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "project");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-P2"
+      class="grid__challenge flex br-normal  level-2 project"
+    >
+      <a href="./challenges/P2_overlay-card.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">P2</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥈  Overlay card
+          </h2>
+          <p class="is-7-xs">Créer une carte avec un overlay.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-P2") == "done") {
+            // console.log('✅ challenge-P2');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-P2')
+          }
+          document
+            .getElementById("challenge-P2")
+            .classList.add(localStorage.getItem("challenge-P2"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "project");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-P3"
+      class="grid__challenge flex br-normal  level-2 project"
+    >
+      <a href="./challenges/P3_newspaper.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">P3</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥈  Newspaper
+          </h2>
+          <p class="is-7-xs">Créer une grille avec des cartes.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-P3") == "done") {
+            // console.log('✅ challenge-P3');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-P3')
+          }
+          document
+            .getElementById("challenge-P3")
+            .classList.add(localStorage.getItem("challenge-P3"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "project");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-P4"
+      class="grid__challenge flex br-normal  level-3 project"
+    >
+      <a href="./challenges/P4_login.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">P4</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥇  Login page
+          </h2>
+          <p class="is-7-xs">Créer une page de connexion super sexy.</p>
+        </div>
+
+        
+
+        <script>
+          if (localStorage.getItem("challenge-P4") == "done") {
+            // console.log('✅ challenge-P4');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-P4')
+          }
+          document
+            .getElementById("challenge-P4")
+            .classList.add(localStorage.getItem("challenge-P4"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "project");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-P5"
+      class="grid__challenge flex br-normal disable level-3 project"
+    >
+      <a href="./challenges/P5_section.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">P5</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥇  Section de présentation
+          </h2>
+          <p class="is-7-xs">Créer une section qui présente quelque chose.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-P5") == "done") {
+            // console.log('✅ challenge-P5');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-P5')
+          }
+          document
+            .getElementById("challenge-P5")
+            .classList.add(localStorage.getItem("challenge-P5"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "project");
+    </script> -->
+
+      
+
+    <script>
+      let done__total_library = 0;
+      // console.log("##### CHALLENGES SECTION TITLE library #####")
+    </script>
+
+                                                                                                                                                                   
+
+    <div class="grid__separator w-full flex-r h-centered v-centered pv-3">
+      <hr class="grid__separator_line" />
+      <h2 class="grid__separator_title mh-3">
+        Utiliser des librairies
+        <div id="progressbar-library" class="grid__separator_title_progressbar">
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+        </div>
+      </h2>
+      <hr class="grid__separator_line" />
+
+      <script>
+        // console.log("# INFOS #");
+        // console.log("for_type : " + "library");
+        // console.log("type : " + "library");
+        // console.log("cat total : " + "0");
+        // console.log("cat done : " + done__total_library);
+        // console.log("Total separator : " + "separator");
+
+        let cat__challenges_library = 0;
+        let challenges_progress_library = Math.round(done__total_library* 100 / cat__challenges_library);
+        // console.log("percentage : " + mainProgressPercent);
+        // document.getElementById('progress-library').style.width = challenges_progress_library + "%";
+
+        // console.log(document.querySelectorAll('#progressbar-library .grid__separator_title_progressbar_square'));
+        // console.log("percent : " + challenges_progress_library);
+        // console.log("percent trunc : " + Math.trunc(challenges_progress_library));
+        // console.log("percent trunc / 10 : " + Math.trunc(challenges_progress_library / 10 * 4));
+
+        for (i = 0; i < (Math.trunc(challenges_progress_library / 10) * 3); i++){
+              // console.log("Added square !");
+              document.querySelectorAll(
+                '#progressbar-library .grid__separator_title_progressbar_square')[i].classList.add(
+                'filled');
+            }
+      </script>
+    </div>
+
+      
+
+    <li
+      id="challenge-L1"
+      class="grid__challenge flex br-normal disable level-1 library"
+    >
+      <a href="./challenges/L1_animate.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">L1</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥉  animate.css
+          </h2>
+          <p class="is-7-xs">Ajouter des animations déjà toutes faites.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-L1") == "done") {
+            // console.log('✅ challenge-L1');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-L1')
+          }
+          document
+            .getElementById("challenge-L1")
+            .classList.add(localStorage.getItem("challenge-L1"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "library");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-L2"
+      class="grid__challenge flex br-normal disable level-1 library"
+    >
+      <a href="./challenges/L2_balloon.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">L2</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥉  balloon.css
+          </h2>
+          <p class="is-7-xs">Ajouter des tooltips n'importe quel élément.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-L2") == "done") {
+            // console.log('✅ challenge-L2');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-L2')
+          }
+          document
+            .getElementById("challenge-L2")
+            .classList.add(localStorage.getItem("challenge-L2"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "library");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-L3"
+      class="grid__challenge flex br-normal disable level-3 library"
+    >
+      <a href="./challenges/L3_fontawesome.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">L3</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🥇  Font Awesome
+          </h2>
+          <p class="is-7-xs">Ajouter des icônes.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-L3") == "done") {
+            // console.log('✅ challenge-L3');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-L3')
+          }
+          document
+            .getElementById("challenge-L3")
+            .classList.add(localStorage.getItem("challenge-L3"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "library");
+    </script> -->
+
+      
+
+    <script>
+      let done__total_game = 0;
+      // console.log("##### CHALLENGES SECTION TITLE game #####")
+    </script>
+
+                                                                                                                                                                   
+
+    <div class="grid__separator w-full flex-r h-centered v-centered pv-3">
+      <hr class="grid__separator_line" />
+      <h2 class="grid__separator_title mh-3">
+        Intégration de maquettes complètes
+        <div id="progressbar-game" class="grid__separator_title_progressbar">
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+          <div class="grid__separator_title_progressbar_square"></div>
+        </div>
+      </h2>
+      <hr class="grid__separator_line" />
+
+      <script>
+        // console.log("# INFOS #");
+        // console.log("for_type : " + "game");
+        // console.log("type : " + "game");
+        // console.log("cat total : " + "0");
+        // console.log("cat done : " + done__total_game);
+        // console.log("Total separator : " + "separator");
+
+        let cat__challenges_game = 0;
+        let challenges_progress_game = Math.round(done__total_game* 100 / cat__challenges_game);
+        // console.log("percentage : " + mainProgressPercent);
+        // document.getElementById('progress-game').style.width = challenges_progress_game + "%";
+
+        // console.log(document.querySelectorAll('#progressbar-game .grid__separator_title_progressbar_square'));
+        // console.log("percent : " + challenges_progress_game);
+        // console.log("percent trunc : " + Math.trunc(challenges_progress_game));
+        // console.log("percent trunc / 10 : " + Math.trunc(challenges_progress_game / 10 * 4));
+
+        for (i = 0; i < (Math.trunc(challenges_progress_game / 10) * 3); i++){
+              // console.log("Added square !");
+              document.querySelectorAll(
+                '#progressbar-game .grid__separator_title_progressbar_square')[i].classList.add(
+                'filled');
+            }
+      </script>
+    </div>
+
+      
+
+    <li
+      id="challenge-I1"
+      class="grid__challenge flex br-normal disable level-5 game"
+    >
+      <a href="./challenges/I1_retro-portal.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">I1</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🏆
+             Retro Portal
+          </h2>
+          <p class="is-7-xs">Le site néo-retro d'une bande de geeks.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-I1") == "done") {
+            // console.log('✅ challenge-I1');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-I1')
+          }
+          document
+            .getElementById("challenge-I1")
+            .classList.add(localStorage.getItem("challenge-I1"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "game");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-I2"
+      class="grid__challenge flex br-normal disable level-5 game"
+    >
+      <a href="./challenges/I2_feed.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">I2</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🏆
+             Feed.co
+          </h2>
+          <p class="is-7-xs">Vente de barres et boissons repas.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-I2") == "done") {
+            // console.log('✅ challenge-I2');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-I2')
+          }
+          document
+            .getElementById("challenge-I2")
+            .classList.add(localStorage.getItem("challenge-I2"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "game");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-I3"
+      class="grid__challenge flex br-normal disable level-5 game"
+    >
+      <a href="./challenges/I3_plantes.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">I3</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🏆
+             plantes.net
+          </h2>
+          <p class="is-7-xs">Une boutique de plantes en ligne.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-I3") == "done") {
+            // console.log('✅ challenge-I3');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-I3')
+          }
+          document
+            .getElementById("challenge-I3")
+            .classList.add(localStorage.getItem("challenge-I3"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "game");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-I4"
+      class="grid__challenge flex br-normal disable level-5 game"
+    >
+      <a href="./challenges/I4_fourgon.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">I4</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🏆
+             Le fourgon
+          </h2>
+          <p class="is-7-xs">Service de livraison de boissons consignées.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-I4") == "done") {
+            // console.log('✅ challenge-I4');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-I4')
+          }
+          document
+            .getElementById("challenge-I4")
+            .classList.add(localStorage.getItem("challenge-I4"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "game");
+    </script> -->
+
+      
+
+    <li
+      id="challenge-I5"
+      class="grid__challenge flex br-normal disable level-5 game"
+    >
+      <a href="./challenges/I5_disflix.html" class="grid__challenge_a fullsize p-1-xs flex-r">
+        <p class="grid__challenge_a_number is-1-xs bold content-centered">I5</p>
+
+        <div class="grid__challenge_a_content flex-c h-centered p-2-xs">
+          <h2 class="bold is-6-xs is-5-m">
+             🏆
+             Disflix+prime
+          </h2>
+          <p class="is-7-xs">Plateforme de streaming.</p>
+        </div>
+
+        
+        <!-- <p>Bientôt disponible</p> -->
+        
+
+        <script>
+          if (localStorage.getItem("challenge-I5") == "done") {
+            // console.log('✅ challenge-I5');
+            done__total++;
+          } else {
+            // console.log('❌ challenge-I5')
+          }
+          document
+            .getElementById("challenge-I5")
+            .classList.add(localStorage.getItem("challenge-I5"));
+        </script>
+
+        <i class="grid__challenge_a_icon fas fa-check"></i>
+        <i class="grid__challenge_a_icon fas fa-sync-alt"></i>
+        <i class="grid__challenge_a_icon fas fa-spinner"></i>
+        <i class="grid__challenge_a_icon fas fa-times-circle"></i>
+        <!-- <i class="grid__challenge_a_icon fas fa-check"></i> -->
+      </a>
+    </li>
+
+    <!--  -->
+    <!-- <script>
+      console.log("challenge type : " + "game");
+    </script> -->
+
+      
+
+    <script>
+      // console.log('done total : ' + done__total);
+    </script>
+  </ul>
+
+  <li id="challenge-" class="grid__challenge flex mt-10 w-full">
+    <a href="./memo.html" target="_blank" class="grid__challenge_a fullsize p-1-xs flex-r v-centered">
+      <p class="grid__challenge_a_number is-1-xs bold content-centered">📖</p>
+
+      <div class="grid__challenge_a_content p-2-xs">
+        <h2 class="bold is-6-xs is-5-m">Consulter le mémo</h2>
+
+        <p class="is-7-xs">Tous les mémos de tous les challenges rassemblés à un seul endroit.</p>
+      </div>
+    </a>
+  </li>
+</section>
+
+<div class="secret fullscreen fixed top left content-centered" id="secret">
+  <iframe
+    class="secret__gif"
+    src="https://giphy.com/embed/R6gvnAxj2ISzJdbA63"
+    frameborder="0"
+    class="giphy-embed"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<script>
+  document.getElementsByTagName("body")[0].addEventListener("keydown", function (event) {
+    if (event.key === "Shift") {
+      showSecret();
+    }
+  });
+
+  document.getElementsByTagName("body")[0].addEventListener("keyup", function (event) {
+    if (event.key === "Shift") {
+      hideSecret();
+    }
+  });
+
+  function showSecret() {
+    document.getElementById("secret").style.display = "flex";
+  }
+
+  function hideSecret() {
+    document.getElementById("secret").style.display = "none";
+  }
+</script>
+
+<div id="loader" class="loader fullscreen fixed top left flex-c content-centered">
+  <audio id="ps2">
+    <source src="https://formation.melvin.studio/integration-workshop/assets/audio/startup.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
+  <svg
+    id="spinner"
+    class="loader__spinner"
+    width="38"
+    height="38"
+    viewBox="0 0 38 38"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+        <stop stop-color="#fff" stop-opacity="0" offset="0%" />
+        <stop stop-color="#fff" stop-opacity=".631" offset="63.146%" />
+        <stop stop-color="#fff" offset="100%" />
+      </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+      <g transform="translate(1 1)">
+        <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 18 18"
+            to="360 18 18"
+            dur="0.9s"
+            repeatCount="indefinite"
+          />
+        </path>
+        <circle fill="#fff" cx="36" cy="18" r="1">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 18 18"
+            to="360 18 18"
+            dur="0.9s"
+            repeatCount="indefinite"
+          />
+        </circle>
+      </g>
+    </g>
+  </svg>
+  <p class="loader__message loader__launch is-4" id="launchLoader" onclick="launchLoader()">
+    Appuyez sur <span class="loader__launch_key">Entrée</span> pour commencer
+  </p>
+  <div id="loaderContent" class="loader__content flex-c content-centered">
+
+    <img class="loader__content_logo" src="https://formation.melvin.studio/integration-workshop/assets/images/logo-loader.png" alt="logo" />
+
+    <div id="progressbar" class="loader__progressbar mt-5">
+      <div id="progress" class="loader__progressbar_progress">
+        <div class="loader__progressbar_progress_square"></div>
+        <div class="loader__progressbar_progress_square"></div>
+        <div class="loader__progressbar_progress_square"></div>
+      </div>
+    </div>
+    <p class="loader__message mt-3" id="loadingMessage">&nbsp;</p>
+  </div>
+
+  <div class="loader__footer"></div>
+</div>
+
+<script>
+  function loaderExit() {
+    console.log("Loader exit");
+    localStorage.setItem("loaded", true);
+    // document.getElementById("loader").style.animationName = "disappear";
+    document.getElementById("loaderContent").style.animationName = "disappear";
+    document.getElementById("progressbar").style.animationName = "disappear";
+    document.getElementById("loadingMessage").innerHTML = "&nbsp;";
+    setTimeout(() => {
+      document.getElementById("loader").style.animationName = "disappear";
+    }, 2000);
+  }
+
+  function showLoader() {
+    document.getElementById("loader").style.display = "flex";
+  }
+
+  let page__title = document.title;
+
+  // document.addEventListener("visibilitychange", (event) => {
+  //   if (document.visibilityState == "visible") {
+  //     document.title = page__title;
+  //   } else {
+  //     document.title = "Page left";
+  //   }
+  // });
+
+  window.onload = function () {
+    console.log("onload done");
+    document.getElementsByTagName("body")[0].addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        launchLoader();
+      }
+    });
+    document.getElementById("spinner").style.opacity = 0;
+    setTimeout(function () {
+      document.getElementById("spinner").style.display = "none";
+    }, 100);
+    document.getElementById("launchLoader").style.display = "inline-block";
+    setTimeout(function () {
+      document.getElementById("launchLoader").style.opacity = 1;
+    }, 100);
+  };
+
+  function launchLoader() {
+    setTimeout(function () {
+      document.getElementById("ps2").play();
+    }, 500);
+
+    document.getElementById("launchLoader").style.opacity = 0;
+
+    setTimeout(function () {
+      document.getElementById("loaderContent").style.display = "flex";
+    }, 1000);
+
+    setTimeout(function () {
+      let y = 0;
+      let messageGeneration = setInterval(() => {
+        // console.log("Message generated");
+
+        if (y < messages.length) {
+          document.getElementById("loadingMessage").innerHTML = messages[y];
+          y++;
+        } else {
+          clearInterval(messageGeneration);
+          loaderExit();
+        }
+      }, 1500);
+
+      i = -10;
+      setInterval(() => {
+        if (i < 35) {
+          progress.style.transform = "translateX(" + i * 10 + "%)";
+          i++;
+        } else {
+          i = -10;
+        }
+      }, 100);
+    }, 500);
+  }
+
+  if (!localStorage.getItem("loaded")) {
+    console.log("launch loader");
+    showLoader();
+  }
+
+  let progress = document.getElementById("progress");
+
+  let messages = [
+    "Chargement du support...",
+    "Installation...",
+    "Connexion à la toile...",
+    "Recherche des assets...",
+    "Génération des challenges...",
+    "Génération du style...",
+    "Vérification de l'intégrité du support...",
+    "Chargement des attitudes : détermination, persévérence, résilience...",
+    "Finalisation...",
+  ];
+</script>
+
+ 
+
+<script>
+  let total__challenges = 16;
+  let mainProgressPercent = Math.round(done__total * 100 / total__challenges);
+  // console.log("mainProgressPercent : " + mainProgressPercent / 10);
+  // console.log("percentage : " + mainProgressPercent);
+  // document.getElementById('main-progression').style.width = mainProgressPercent + "%";
+  document.getElementById('main-progression--percent').innerHTML = mainProgressPercent + "%";
+
+  // console.log("To do : " + Math.trunc(mainProgressPercent / 10 * 2));
+  for (i = 0; i < Math.trunc(mainProgressPercent / 10 * 2); i++) {
+    // console.log("main progress square !");
+    document.querySelectorAll('#topbar-progressbar .topbar__progress_bar_square')[i].classList.add('filled');
+  }
+
+  // console.log("total challenges : " + "16");
+</script>
+
+        </div>
+
+    </main>
+
+     
+
+<footer class="footer">
+
+  <div class="container flex-c">
+
+    <img class="footer__logo" src="https://formation.melvin.studio/integration-workshop/assets/images/logo-footer.png" alt="Logo"/>
+
+    <p class="is-6 mt-1">Version <span class="bold">1.5</span><span class="op-25">
+      publiée
+      <span class="" id="moment-footer"></span>
+    </span></p>
+
+    
+
+    <a class="is-6" href="https://formation.melvin.studio/integration-workshop" target="_blank"
+      >Site du support <i class="fa-solid fa-arrow-up-right-from-square"></i
+    ></a>
+
+      <p class="is-6 mt-3">
+        Support pédgogique de formation au Javascript pensé et développé avec passion ❤️ par
+        <a class="bold" href="https://melvin-lemoine.me" target="_blank">Melvin Lemoine</a>.
+      </p>
+      <!-- <p class="total is-7"><span class="bold">1</span> étudiant·e·s ont déjà utilisé ce support.</p> -->
+
+      
+
+      <script>
+        document.getElementById("moment-footer").innerHTML = moment(
+          "11.10.2022 13:30",
+          "DD.MM.YYYY hh:mm"
+        ).fromNow();
+      </script>
+
+  </div>
+</footer>
+
+
+    <script>
+        console.log('%cWelcome on', 'font-size: 2rem; text-shadow: 2px 2px 0 red; text-transform: uppercase');
+        console.log('%cJavaScript WorkShop',
+            'color: #323330; padding: 1rem; font-size: 3rem; text-shadow: 2px 2px 0 white; font-weight: bold; text-transform: uppercase; background-color: #F0EE65'
+        );
+    </script>
+
+</body>
+
+</html>

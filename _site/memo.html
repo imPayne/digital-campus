@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>🧾 Mémo 🧾</title>
+
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/fr.min.js"
+  integrity="sha512-RAt2+PIRwJiyjWpzvvhKAG2LEdPpQhTgWfbEkFDCo8wC4rFYh5GQzJBVIFDswwaEDEYX16GEE/4fpeDNr7OIZw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script>
+  moment.locale("fr");
+</script>
+
+
+    <link rel="icon" href="https://formation.melvin.studio/integration-workshop/assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/ploume.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+  </head>
+
+  <body class="body memo ">
+    <main class="main">
+      <div class="container"><section class="section">
+  <h1 class="page-title is-1-xs is-white bold text-centered uppercase mb-3-xs">🧾 MEMO 🧾</h1>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Sélecteurs</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">
+    <span class="string">.title </span>{ <span class="comment">// Sélectionner une classe</span><br />
+    &emsp;border: <span class="integer">1px solid red</span>; <span class="comment">// Mettre une bordure rouge</span><br />}
+  </p>
+
+  <br />
+
+  <p class="group">
+    <span class="function">#mainTitle </span>{ <span class="comment">// Sélectionner un ID</span><br />
+    &emsp;border: <span class="integer">1px solid blue</span>; <span class="comment">// Mettre une bordure bleue</span><br />}
+  </p>
+
+  <br />
+
+  <p class="group">
+    <span class="integer">body </span>{ <span class="comment">// Sélectionner la balise body</span><br />
+    &emsp;border: <span class="integer">1px solid pink</span>; <span class="comment">// Mettre une bordure rose</span><br />}
+  </p>
+
+  <br />
+
+  <p class="group">
+    <span class="integer">body</span> <span class="string">.title </span>{
+    <span class="comment">// Sélectionner la classe "title" dans la balise "body"</span><br />
+    &emsp;border: <span class="integer">1px solid green</span>; <span class="comment">// Mettre une bordure verte</span><br />}
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Texte</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">font-size: <span class="integer">1rem</span>; <span class="comment">// Définir la taille du texte</span></p>
+
+  <br />
+
+  <p class="group">font-weight: <span class="integer">lighter | normal | bold</span>; <span class="comment">// Définir l'épaisseur du texte</span></p>
+
+  <br />
+
+  <p class="group">
+    text-transform: <span class="integer">lowercase | capitalize | uppercase</span>; <span class="comment">// Définir la casse du texte</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    text-decoration: <span class="integer">underline | line-through</span>; <span class="comment">// Définir la casse du texte</span>
+  </p>
+
+  <br />
+
+  <p class="group">font-style: <span class="integer">italic | normal | oblique</span>; <span class="comment">// Définir la casse du texte</span></p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Display</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">
+    display: <span class="integer">inline | inline-block | block</span>; <span class="comment">// Définir le mode d'affichage</span>
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Longueur & hauteur (width & height)</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">
+    width: <span class="integer">50% | 10rem | auto | fit-content</span>; <span class="comment">// Définir la longueur d'un élément</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    height: <span class="integer">50% | 10rem | auto | fit-content</span>; <span class="comment">// Définir la hauteur d'un élément</span>
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Box model (marges internes et externes)</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">
+    margin: <span class="integer">1rem</span>; <span class="comment">// Défini une marge extérieure de 10rem sur tous les côtés</span>
+    <br />
+    margin: <span class="integer">1rem 5%</span>;
+    <span class="comment">// Défini une marge extérieure de 1rem verticalement (en haut et en bas) et 5% horizontalement (à droite et à gauche)</span>
+    <br />
+    margin: <span class="integer">1rem 5% 3px auto</span>;
+    <span class="comment"
+      >// Défini la marge extérieure de chaque côté en partant du haut et en tournant le sens des aiguilles d'une montre : haut, droite, bas,
+      gauche</span
+    >
+  </p>
+
+  <br />
+
+  <p class="group">
+    padding: <span class="integer">1rem</span>; <span class="comment">// Défini une marge intérieure de 10rem sur tous les côtés</span>
+    <br />
+    padding: <span class="integer">1rem 5%</span>;
+    <span class="comment">// Défini une marge intérieure de 1rem verticalement (en haut et en bas) et 5% horizontalement (à droite et à gauche)</span>
+    <br />
+    padding: <span class="integer">1rem 5% 3px auto</span>;
+    <span class="comment"
+      >// Défini la marge intérieure de chaque côté en partant du haut et en tournant le sens des aiguilles d'une montre : haut, droite, bas,
+      gauche</span
+    >
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Backgrounds</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">
+    background-color: <span class="integer">red | #F56E28 | rgb(245, 110, 40) | rgba(245, 110, 40, 1)</span>;
+    <span class="comment">// Défini un fond de couleur</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    background-image: <span class="string">url('illustration.png')</span>;
+    <span class="comment">// Défini une image en fond</span>
+    <br />
+    background-size: <span class="integer">cover | contain | auto | 100% 50% | top left</span>;
+    <span class="comment">// Défini la taille du fond</span>
+    <br />
+    background-position: <span class="integer">top | right | left | bottom | top left...</span>;
+    <span class="comment">// Défini la position du fond</span>
+    <br />
+    background-repeat: <span class="integer">repeat | no-repeat</span>;
+    <span class="comment">// Défini si un fond doit être répété</span>
+  </p>
+
+  </code>
+
+</div> <div class="buttons">
+  <a class="blue" href="https://cssgradient.io/" target="_blank">
+    <span class="icon">
+      <i class="fa-solid fa-toolbox"></i>
+    </span>
+    Générateur de dégradé
+  </a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Flex</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">
+    display: <span class="integer">flex</span>;
+    <span class="comment">// Défini le mode d'affichage en flex</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    flex-direction: <span class="integer">row | column</span>;
+    <span class="comment">// Défini l'orientation de l'alignement</span>
+    <br />
+    flex-wrap: <span class="integer">wrap | no-wrap</span>;
+    <span class="comment">// Défini si le contenu doit retourner à la ligne si il n'y a plus de place</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    justify-content: <span class="integer">flex-start | center | flex-end | space-between | space-around</span>;
+    <span class="comment">// Défini l'alignement sur l'axe horizontal ou vertical selon la flex-direction</span>
+    <br />
+    align-items: <span class="integer">flex-start | center | flex-end | stretch</span>;
+    <span class="comment">// Défini l'alignement sur l'axe horizontal ou vertical selon la flex-direction</span>
+  </p>
+
+  </code>
+
+</div> <div class="buttons">
+  <a class="blue" href="https://flexboxfroggy.com/#fr" target="_blank">
+    <span class="icon">
+      <i class="fa-solid fa-gamepad-modern"></i>
+    </span>
+    Jeu pour apprendre l'alignement avec flex
+  </a>
+
+  <a class="green" href="memo/flex.html" target="_blank">
+    <span class="icon">
+      <i class="fa-solid fa-toolbox"></i>
+    </span>
+    Visualiseur
+  </a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Grid</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">
+    display: <span class="integer">grid</span>;
+    <span class="comment">// Défini le mode d'affichage en grid</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    grid-template-columns:
+    <span class="function">
+      repeat(<span class="integer">1</span>, <span class="integer">2</span><span class="function">fr</span>) <span class="default">|</span>
+      <span class="integer">50% 50%</span> <span class="default">|</span>
+      <span class="integer"
+        ><span class="integer">3</span><span class="function">fr</span> <span class="integer">9</span><span class="function">fr</span></span
+      > </span
+    >;
+    <span class="comment">// Défini les colonnes de la grille</span>
+    <br />
+    grid-templates-rows:
+    <span class="function">
+      repeat(<span class="integer">1</span>, <span class="integer">2</span><span class="function">fr</span>) <span class="default">|</span>
+      <span class="integer">50% 50%</span> <span class="default">|</span>
+      <span class="integer"
+        ><span class="integer">3</span><span class="function">fr</span> <span class="integer">9</span><span class="function">fr</span></span
+      > </span
+    >;
+    <span class="comment">// Défini les lignes de la grille</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    column-gap: <span class="integer">1rem</span>;
+    <span class="comment">// Défini l'espace entre les colonnnes</span>
+    <br />
+    row-gap: <span class="integer">1rem</span>;
+    <span class="comment">// Défini l'espacement entre les lignes</span>
+    <br />
+    gap: <span class="integer">1rem</span>;
+    <span class="comment">// Défini l'espacement entre les colonnes et les lignes</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    grid-column: <span class="integer">1 <span class="special">/</span> span 2</span>;
+    <span class="comment">// Défini que l'élément prend 2 colonnes à partir de la première</span>
+    <br />
+    grid-row: <span class="integer">1 <span class="special">/</span> span 2</span>;
+    <span class="comment">// Défini que l'élément prend 2 lignes à partir de la première</span>
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Absolute</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <span class="comment">// Un élément en position absolute se positionne par rapport à l'élément parent en relative le plus proche</span>
+
+  <br />
+
+  <p class="group">
+    display: <span class="integer">absolute</span>;
+    <span class="comment">// Défini le mode d'affichage en absolute</span>
+    <br />
+    display: <span class="integer">relative</span>;
+    <span class="comment">// Défini le mode d'affichage en relative</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    top: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au haut de l'élément parent en relative</span>
+
+    <br />
+
+    right: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au côté droit de l'élément parent en relative</span>
+
+    <br />
+
+    left: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au côté gauche de l'élément parent en relative</span>
+
+    <br />
+
+    bottom: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au bas de l'élément parent en relative</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    z-index: <span class="integer">0</span> | <span class="integer">9999999</span>;
+    <span class="comment">// Défini la priorité d'affichage, de 0 à l'infini</span>
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Fixed</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <span class="comment">// Un élément en position fixed se positionne par rapport aux bordures de l'écran.</span>
+
+  <br />
+
+  <p class="group">
+    display: <span class="integer">fixed</span>;
+    <span class="comment">// Défini le mode d'affichage en fixed</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    top: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au haut de l'élément parent en relative</span>
+
+    <br />
+
+    right: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au côté droit de l'élément parent en relative</span>
+
+    <br />
+
+    left: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au côté gauche de l'élément parent en relative</span>
+
+    <br />
+
+    bottom: <span class="integer">0</span> | <span class="integer">25%</span> | <span class="integer">5rem</span>
+    <span class="comment">// Défini la position par rapport au bas de l'élément parent en relative</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    z-index: <span class="integer">0</span> | <span class="integer">9999999</span>;
+    <span class="comment">// Défini la priorité d'affichage, de 0 à l'infini</span>
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Hover</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <span class="comment">// Le hover est le fait de que la souris soit sur un élément.</span>
+
+  <br />
+
+  <p class="group">
+    <span class="string">.box </span>{<br />
+    &emsp;background-color: <span class="integer">#F3F7FD</span>;<br />}
+  </p>
+
+  <br />
+
+  <p class="group">
+    <span class="string">.box<span class="integer">:hover</span> </span>{
+    <span class="comment">// Sélectionner la classe "box" uniquement lors du hover</span><br />
+    &emsp;background-color: <span class="integer">red</span>; <span class="comment">// Ce style s'appliquera uniquement lors du hover</span>
+    <br />
+    &emsp;<span class="comment">// Toutes les propriétés peuvent être utilisées lors d'un effet hover</span>
+    <br />
+    }
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Transform</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <span class="comment">// Le transform permet d'effectuer une transformation 2D et 3D sur un élément</span>
+
+  <br />
+
+  <p class="group">
+    transform:
+    <span class="function">rotate(<span class="integer">180</span>deg)</span>;
+    <span class="comment">// Défini le degré de rotatation</span>
+
+    <br />
+
+    transform:
+    <span class="function"> translate(<span class="integer">1</span>rem, <span class="integer">-1</span>rem)</span>;
+    <span class="comment">// Défini le décalage sur l'axe vertical et horizontal</span>
+
+    <br />
+
+    transform: <span class="function">scale(<span class="integer">1.25</span>)</span>;
+    <span class="comment">// Défini la taille de l'élément sur 1.25 fois sa taille (+25%)</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    transform:
+    <span class="function"
+      >rotate(<span class="integer">180</span>deg) translate(<span class="integer">1</span>rem, <span class="integer">-1</span>rem)</span
+    >
+    <span class="function">scale(<span class="integer">1.25</span>)</span>;
+    <span class="comment">// Pour appliquer plusieurs transformations avec la propriété transform, il faut les mettre à la suite</span>
+  </p>
+
+  </code>
+
+</div>
+</section>
+
+<section class="section">
+  <h2 class="section__title">Transitions</h2>
+
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <span class="comment">// Une transition permet d'effectuer un changement de style progressivement afin de le voir</span>
+
+  <br />
+
+  <p class="group">transition: propriété durée courbe délai; <span class="comment">// Format de la propriété transition</span></p>
+  <br />
+
+  <p class="group">
+    transition:
+    <span class="integer">all 1<span class="function">s</span> linear</span>;
+    <span class="comment">// Transition sur tout, qui dure 1 seconde, avec une courbe linéaire</span>
+
+    <br />
+
+    transition:
+    <span class="integer">background-color .1<span class="function">s</span> ease-in-out 1<span class="function">s</span></span
+    >;
+    <span class="comment"
+      >// Transition sur le changement de couleur de fond uniquement, qui dure 0.1 seconde, avec une courbe lente au début et à la fin, et un délai de
+      1 seconde</span
+    >
+
+    <br />
+
+    transition:
+    <span class="integer">background-color .1<span class="function">s</span> ease-in-out</span>,
+    <span class="integer">width .1<span class="function">s</span> ease-in-out</span>;
+    <span class="comment">// 2 transitions sur 2 propriétés uniquement, sur le même élément</span>
+  </p>
+
+  </code>
+
+</div> <div class="buttons">
+  <a
+    class="buttons__button"
+    href="https://formation.melvin.studio/integration-workshop/assets/images/challenges/N13_transitions/courbes.png"
+    target="_blank"
+  >
+    <span class="buttons__button_icon">
+      <i class="fa-solid fa-chart-line"></i>
+    </span>
+    Courbes
+  </a>
+  </div>
+</section>
+</div>
+    </main>
+
+     
+
+<footer class="footer">
+
+  <div class="container flex-c">
+
+    <img class="footer__logo" src="https://formation.melvin.studio/integration-workshop/assets/images/logo-footer.png" alt="Logo"/>
+
+    <p class="is-6 mt-1">Version <span class="bold">1.5</span><span class="op-25">
+      publiée
+      <span class="" id="moment-footer"></span>
+    </span></p>
+
+    
+
+    <a class="is-6" href="https://formation.melvin.studio/integration-workshop" target="_blank"
+      >Site du support <i class="fa-solid fa-arrow-up-right-from-square"></i
+    ></a>
+
+      <p class="is-6 mt-3">
+        Support pédgogique de formation au Javascript pensé et développé avec passion ❤️ par
+        <a class="bold" href="https://melvin-lemoine.me" target="_blank">Melvin Lemoine</a>.
+      </p>
+      <!-- <p class="total is-7"><span class="bold">1</span> étudiant·e·s ont déjà utilisé ce support.</p> -->
+
+      
+
+      <script>
+        document.getElementById("moment-footer").innerHTML = moment(
+          "11.10.2022 13:30",
+          "DD.MM.YYYY hh:mm"
+        ).fromNow();
+      </script>
+
+  </div>
+</footer>
+
+  </body>
+</html>

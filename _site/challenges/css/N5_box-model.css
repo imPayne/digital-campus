@@ -1,0 +1,16 @@
+.first {
+    padding: 1rem;
+    margin-right: 1rem;
+    width: 40%;
+}
+
+.second {
+    margin-top: auto;
+    width: 50%;
+}
+
+.third {
+    margin-top: 3rem;
+    margin-left: auto;
+    padding: 3rem;
+}

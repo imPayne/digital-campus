@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>🏆 Challenge #N2 · Textes</title>
+
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/fr.min.js"
+  integrity="sha512-RAt2+PIRwJiyjWpzvvhKAG2LEdPpQhTgWfbEkFDCo8wC4rFYh5GQzJBVIFDswwaEDEYX16GEE/4fpeDNr7OIZw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<script>
+  moment.locale("fr");
+</script>
+
+
+    <link rel="icon" href="https://formation.melvin.studio/integration-workshop/assets/images/favicon.png" />
+    <link rel="stylesheet" href="../assets/css/ploume.min.css" />
+
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link href="css/N2_textes.css" rel="stylesheet"></link>
+
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+  </head>
+
+  <body class="body challenge textes">
+    <header class="header">
+
+    <audio id="sound__done" style="display: none">
+        <source src="https://formation.melvin.studio/integration-workshop/assets/audio/done.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="sound__notdone" style="display: none">
+        <source src="https://formation.melvin.studio/integration-workshop/assets/audio/notdone.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="sound__blocked" style="display: none">
+        <source src="https://formation.melvin.studio/integration-workshop/assets/audio/blocked.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="sound__incomplete" style="display: none">
+        <source src="https://formation.melvin.studio/integration-workshop/assets/audio/incomplete.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="sound__inprogress" style="display: none">
+        <source src="https://formation.melvin.studio/integration-workshop/assets/audio/inprogress.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1 class="header__title flex-r h-centered w-full is-5-xs">
+            🏆 Challenge #N2&nbsp;·&nbsp;<b>Textes</b>
+            <span class="flex-c ml-auto">
+                <span class="header__title_file is-7-">HTML · challenges/N2_textes.html</span>
+                <span class="header__title_file ml-auto is-7-">CSS · challenges/css/N2_textes.css</span>
+            </span>
+        </h1>
+        </span></h1>
+        <hr class="header__separator mv-1" />
+        <div class="header__controls flex-r h-centered space-between">
+            <div class="header__controls_buttons">
+
+                <a class="button is-info is-bordered is-small" href="../index.html">
+                    <span class="icon">
+                        <i class="fas fa-th-list"></i>
+                    </span>
+                    Liste des challenges
+                </a>
+
+                
+
+                
+
+            </div>
+
+            <div id="status" class="header__controls_select flex-r">
+
+                <p class="header__controls_select_label">
+                    <span id="status-icon" class="header__controls_select_label_icon fas"></span>
+                    <span id="status-label">À faire</span>
+                </p>
+
+                <span class="header__controls_select_icon">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+                <ul id="status-list" class="header__controls_select_list">
+                    <li id="status-todo"
+                        class="header__controls_select_list_status header__controls_select_list_status--todo"
+                        onclick="setStatus('todo')">
+                        <i class="header__controls_select_list_status_icon fas fa-hourglass-start"></i>
+                        <span class="header__controls_select_list_status_label">À faire</span>
+                    </li>
+                    <li id="status-done"
+                        class="header__controls_select_list_status header__controls_select_list_status--done"
+                        onclick="setStatus('done')">
+                        <i class="header__controls_select_list_status_icon fas fa-check"></i>
+                        <span class="header__controls_select_list_status_label">Terminé</span>
+                    </li>
+                    <li id="status-inprogress"
+                        class="header__controls_select_list_status header__controls_select_list_status--inprogress"
+                        onclick="setStatus('inprogress')">
+                        <i class="header__controls_select_list_status_icon fas fa-sync-alt"></i>
+                        <span class="header__controls_select_list_status_label">En cours</span>
+                    </li>
+                    <li id="status-incomplete"
+                        class="header__controls_select_list_status header__controls_select_list_status--incomplete"
+                        onclick="setStatus('incomplete')">
+                        <i class="header__controls_select_list_status_icon fas fa-spinner"></i>
+                        <span class="header__controls_select_list_status_label">Incomplet</span>
+                    </li>
+                    <li id="status-blocked"
+                        class="header__controls_select_list_status header__controls_select_list_status--blocked"
+                        onclick="setStatus('blocked')">
+                        <i class="header__controls_select_list_status_icon fas fa-times-circle"></i>
+                        <span class="header__controls_select_list_status_label">Blocage</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let page_number = "N2";
+    </script>
+
+    <script src="../assets/js/challenge.js">
+
+    </script>
+</header>
+
+    <main class="main"><div class="container">
+  <div class="CodeBox">
+    <div class="CodeBox__header flex-r h-centered space-between p-2 pointer" onclick="$(this).next().slideToggle();">
+      <h2 class="CodeBox__header_title fw-medium is-6">Mémo</h2>
+      <div class="CodeBox__header_controls flex-r">
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--green"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--yellow"></span>
+        <span class="CodeBox__header_controls_control CodeBox__header_controls_control--red"></span>
+      </div>
+    </div>
+
+    <code class="CodeBox__code code">
+
+  <p class="group">font-size: <span class="integer">1rem</span>; <span class="comment">// Défini la taille du texte</span></p>
+
+  <br />
+
+  <p class="group">font-weight: <span class="integer">lighter | normal | bold</span>; <span class="comment">// Défini l'épaisseur du texte</span></p>
+
+  <br />
+
+  <p class="group">
+    text-transform: <span class="integer">lowercase | capitalize | uppercase</span>; <span class="comment">// Défini la casse du texte</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    text-align: <span class="integer">left | center | justify | right</span>; <span class="comment">// Défini l'alignement du texte</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    text-decoration: <span class="integer">underline | line-through</span>; <span class="comment">// Défini la décoration du texte (surligné, sous-ligné...)</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    font-style: <span class="integer">italic | normal | oblique</span>; <span class="comment">// Défini le style d'écriture du texte</span>
+  </p>
+
+  <br />
+
+  <p class="group">
+    color: <span class="integer">red | #F3F5FD | rgba(10, 255, 46)</span>; <span class="comment">// Défini le style d'écriture du texte</span>
+  </p>
+
+  </code>
+
+</div>
+
+  <section class="section manipulate">
+    <h2 class="section__title nomb">1️⃣ Manipulez le style de textes</h2>
+    <p class="section__subtitle">
+      Créez 7 boîtes (balise <span class="code">div</span>), avec dans chaque un texte (balise <span class="code">p</span>). Puis appliquez du style
+      sur ces textes pour arriver au résultat attendu. <i>Du style va automatiquement s'appliquer sur vos boîtes.</i>
+    </p>
+    <div class="section__content">
+      
+<!-- ################################################## -->
+<!-- ################################################## -->
+<!-- ######### ÉCRIVEZ VOTRE CODE CI-DESSOUS ########## -->
+<!-- ################################################## -->
+<!-- ################################################## -->
+
+      <H1 class="title_text" id="F">Texte 1</H1>
+      <h1 class="title_text" id="S">Text 2</h1>
+      <h1 class="title_text" id="T">Text 3</h1>
+      <p class="normal_text" id="first">Ce texte est aligné à gauche, simple, basique.</p>
+      <p class="normal_text" id="second">Ce text est centré, pas très agréable et confortable à lire pour un text sur plusieurs ligne. A éviter donc, mauvaise idée, ne faites pas ça, sauf pour l'exercice de maintenant.</p>
+      <p class="normal_text" id="third">Ce text est aligné à droite, pourquoi? Parce qu'il est important de savoir qu'on peut faire ça.</p>
+<!-- ################################################## -->
+<!-- ################################################## -->
+<!-- ########## ÉCRIVEZ VOTRE CODE CI-DESSUS ########## -->
+<!-- ################################################## -->
+<!-- ################################################## -->
+
+    </div>
+  </section>
+
+  <section class="section demo">
+    <h2 class="section__title">🎯 Résultat attendu</h2>
+    <div class="section__content">
+      <img src="https://formation.melvin.studio/integration-workshop/assets/images/challenges/N2_textes/resultat.png" alt="Résultat attendu" />
+    </div>
+  </section>
+</div>
+</main>
+
+     
+
+<footer class="footer">
+
+  <div class="container flex-c">
+
+    <img class="footer__logo" src="https://formation.melvin.studio/integration-workshop/assets/images/logo-footer.png" alt="Logo"/>
+
+    <p class="is-6 mt-1">Version <span class="bold">1.5</span><span class="op-25">
+      publiée
+      <span class="" id="moment-footer"></span>
+    </span></p>
+
+    
+
+    <a class="is-6" href="https://formation.melvin.studio/integration-workshop" target="_blank"
+      >Site du support <i class="fa-solid fa-arrow-up-right-from-square"></i
+    ></a>
+
+      <p class="is-6 mt-3">
+        Support pédgogique de formation au Javascript pensé et développé avec passion ❤️ par
+        <a class="bold" href="https://melvin-lemoine.me" target="_blank">Melvin Lemoine</a>.
+      </p>
+      <!-- <p class="total is-7"><span class="bold">1</span> étudiant·e·s ont déjà utilisé ce support.</p> -->
+
+      
+
+      <script>
+        document.getElementById("moment-footer").innerHTML = moment(
+          "11.10.2022 13:30",
+          "DD.MM.YYYY hh:mm"
+        ).fromNow();
+      </script>
+
+  </div>
+</footer>
+
+  </body>
+</html>
