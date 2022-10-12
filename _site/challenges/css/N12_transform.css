@@ -1,0 +1,13 @@
+.box.first {
+    transform: rotate(180deg) scale(.75);
+}
+
+.box.first:hover {
+    transform: rotate(0) scale(1);
+    transition: .5s;
+}
+
+.box.second:hover {
+    transition: .5s;
+    transform: translate(-5rem, -10rem);
+}
