@@ -1,0 +1,37 @@
+.whiteBlock {
+    position: relative;
+}
+
+.square.is-success {
+    position: relative;
+    z-index: 2;
+}
+
+.subsquare.is-danger {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.subsquare.is-caution {
+    position: absolute;
+    z-index: 0;
+    left: 15rem;
+    top: -5rem;
+}
+
+.subsquare.is-warning {
+    position: absolute;
+    z-index: 0;
+    top: 5rem;
+    bottom: 5rem;
+    right: 5rem;
+}
+
+.subsquare.is-info {
+    position: absolute;
+    z-index: 0;
+    top: 12rem;
+    left: 7rem;
+}
