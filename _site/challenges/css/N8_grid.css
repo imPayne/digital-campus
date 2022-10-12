@@ -1,0 +1,13 @@
+.section .grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+.grid .square--5 {
+    grid-column: 2 / span 2;
+}
+
+.grid .square--6 {
+    grid-column: 1 / span 3;
+}
