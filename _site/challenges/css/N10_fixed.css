@@ -1,0 +1,13 @@
+.baner { 
+    position: fixed;
+    color: white;
+    background-color: rgb(255, 119, 0);
+    top: 0;
+    left: 0;
+    padding: 2px;
+    margin-top: .2rem;
+    margin-left: .2rem;
+    text-align: center;
+    z-index: 0;
+    right: 0%;
+}
