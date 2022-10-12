@@ -1,0 +1,9 @@
+.box {
+    color: black;
+    background-color: white;
+}
+
+.box:hover {
+    color: white;
+    background-color: black;
+}
