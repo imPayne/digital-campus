@@ -1,7 +1,9 @@
 .box.move:hover {
     transition: 1s;
-    background-color: black !important;
+    transition: color 1s ease-in-out 1s, background-color 1s ease-in-out 1s !important;
     color: white;
+    background-color: black;
+    transition: width 1s ease-in-out !important;
     width: 100% !important;
 }
 
