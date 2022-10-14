@@ -1,18 +1,18 @@
 .navbar {
     background-color: rgb(236, 245, 252);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 5px;
-    padding-left: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
     color: black;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0%;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .pages {
     display: flex;
     flex-direction: row;
@@ -63,7 +63,7 @@ img {
 .connection {
     background-color: rgb(75, 119, 250);
     border-radius: 4px;
-    padding: 5px 5px 3px;
     color: white !important;
     font-weight: normal !important;
+    padding: .5rem;
 }
