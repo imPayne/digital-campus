@@ -1,0 +1,51 @@
+.groupeee {
+    width: 100%;
+    height: 40rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.box {
+    border-radius: 5px;
+    background-position: center;
+    background-size: 100%;
+    transition: all .2s linear;
+}
+
+.box:hover {
+    transform: scale(1.02);
+    transition: all .2s linear;
+}
+
+.box.star {
+    background-image: url("https://media.istockphoto.com/photos/deep-space-background-picture-id178149253?k=20&m=178149253&s=612x612&w=0&h=TJOJWolz2MJt-QLH0jPvbl-Bz-4ySIvSTVdKoLP1lfg=");
+}
+
+.star {
+    min-height: 38rem;
+    grid-row: 1/ span 2;
+}
+
+.overlay {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+}
+
+.box.sport {
+    background-image: url("https://img.freepik.com/photos-gratuite/jeune-homme-bonne-sante-athlete-faisant-exercice-cordes-dans-salle-gym-modele-masculin-celibataire-pratiquant-dur-entrainant-haut-du-corps-concept-mode-vie-sain-sport-fitness-musculation-bien-etre_155003-27879.jpg?w=2000");
+}
+
+.sport {
+    min-height: 18rem;
+}
+
+.box.fruit {
+    background-image: url("https://images6.alphacoders.com/368/368872.jpg");
+}
+
+.fruit {
+    min-height: 18rem;
+}
